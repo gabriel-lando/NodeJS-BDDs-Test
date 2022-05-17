@@ -22,7 +22,7 @@
             .post(window.location.href + "question/", data)
             .then((resposta) => {
                console.log(resposta.data);
-               document.getElementById("question-post").value = "";
+               //document.getElementById("question-post").value = "";
                document.getElementById("correct-post").value = "";
                document.getElementById("wrong-post").value = "";
               })
@@ -101,7 +101,7 @@
         id="question-post"
         name="question"
         value=""
-        size="60"
+        size="84"
       /><br /><br />
       <label style="color:darkgreen" for="correct"><b>Resposta correta:</b></label><br />
       <label for="correct">Ex.: "Retorna o AND."</label><br />
@@ -110,7 +110,7 @@
         id="correct-post"
         name="correct"
         value=""
-        size="60"
+        size="84"
       /><br /><br />
       <label style="color:red" for="wrong"><b>Resposta errada:</b></label><br />
       <label for="wrong">Ex.: "Retorna o AND."</label><br />
@@ -119,7 +119,7 @@
         id="wrong-post"
         name="wrong"
         value=""
-        size="60"
+        size="84"
       /><br /><br />
       <input type="button" id="post-btn" value="Enviar" onclick="postData();" />
     </form>
@@ -135,7 +135,7 @@
         id="question-get"
         name="question"
         value=""
-        size="60"
+        size="84"
       /><br /><br />
       <input type="button" id="post-btn" value="Buscar" onclick="getData();" />
     </form>
