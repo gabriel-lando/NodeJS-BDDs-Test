@@ -1,5 +1,5 @@
 # Use NodeJS Latest Slim image
-FROM node:latest-slim
+FROM node:slim
 
 # Create app directory 
 WORKDIR /app
