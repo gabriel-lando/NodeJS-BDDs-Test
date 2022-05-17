@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prova BDDs</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
+  </head>
+  <body>
+    <script>
+      function postData() {
+        try {
+          const question = document.getElementById("question-post").value;
+          const correct = document.getElementById("correct-post").value;
+          const wrong = document.getElementById("wrong-post").value;
+
+          const data = {
+            question,
+            correct,
+            wrong,
+          };
+
+          axios
+            .post(window.location.href + "question/", data)
+            .then((resposta) => console.log(resposta.data))
+            .catch((erro) => console.error(erro));
+        } catch (err) {
+          console.error(`Error: ${err}`);
+        }
+      }
+
+      function getData() {
+        try {
+          const question = document.getElementById("question-get").value;
+
+          axios
+            .get(window.location.href + "question/" + question)
+            .then((resposta) => {
+              console.log(resposta.data);
+              tableCreate(resposta.data?.answers);
+            })
+            .catch((erro) => {
+              console.error(erro);
+              tableDelete();
+            });
+        } catch (err) {
+          console.error(`Error: ${err}`);
+        }
+      }
+
+      function tableDelete() {
+        const element = document.getElementById("table");
+        element?.remove();
+      }
+
+      function tableCreate(data) {
+        tableDelete();
+
+        if (!data) return;
+
+        console.log(data);
+
+        const body = document.body,
+          tbl = document.createElement("table");
+
+        tbl.id = "table";
+        tbl.style.width = "200px";
+        tbl.style.border = "1px solid black";
+
+        var result = [];
+        result.push({ c: "Corretas:", e: "Erradas:" });
+        const length = Math.max(data.corrects.length, data.wrongs.length);
+        for (let i = 0; i < length; i++) {
+          result.push({ c: data.corrects[i] ?? "", e: data.wrongs[i] ?? "" });
+        }
+        result.forEach((item) => {
+          const tr = tbl.insertRow();
+          const tdl = tr.insertCell();
+          tdl.appendChild(document.createTextNode(item.c));
+          tdl.style.border = "1px solid black";
+          const tdr = tr.insertCell();
+          tdr.appendChild(document.createTextNode(item.e));
+          tdr.style.border = "1px solid black";
+        });
+
+        body.appendChild(tbl);
+      }
+    </script>
+
+    <h1>Adicionar resposta:</h1>
+
+    <form>
+      <label for="question">Pergunta:</label><br />
+      <label for="question">Ex.: "Para o BDD abaixo a rotina ITE(8,6,0):"</label
+      ><br />
+      <input
+        type="text"
+        id="question-post"
+        name="question"
+        value=""
+        size="60"
+      /><br /><br />
+      <label for="correct">Resposta correta:</label><br />
+      <label for="correct">Ex.: "Retorna o AND."</label><br />
+      <input
+        type="text"
+        id="correct-post"
+        name="correct"
+        value=""
+        size="60"
+      /><br /><br />
+      <label for="wrong">Resposta errada:</label><br />
+      <label for="wrong">Ex.: "Retorna o AND."</label><br />
+      <input
+        type="text"
+        id="wrong-post"
+        name="wrong"
+        value=""
+        size="60"
+      /><br /><br />
+      <input type="button" id="post-btn" value="Enviar" onclick="postData();" />
+    </form>
+
+    <h1>Buscar pergunta:</h1>
+
+    <form>
+      <label for="question">Pergunta:</label><br />
+      <label for="question">Ex.: "Para o BDD abaixo a rotina ITE(8,6,0):"</label
+      ><br />
+      <input
+        type="text"
+        id="question-get"
+        name="question"
+        value=""
+        size="60"
+      /><br /><br />
+      <input type="button" id="post-btn" value="Buscar" onclick="getData();" />
+    </form>
+  </body>
+</html>
