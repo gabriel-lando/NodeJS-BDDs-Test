@@ -19,5 +19,5 @@ EXPOSE 8000
 CMD [ "node", "index.js" ]
 
 # How to run:
-# docker build . -t bdds-test
-# docker run -d -p 8005:8000 -v /home/gabriel/data/nodejs/BDDs-Test/data:/app/data --restart unless-stopped --name bdds-test bdds-test
+# docker build . -t lando/bdds-test
+# docker run -d -p 8005:8000 -v /home/gabriel/data/nodejs/BDDs-Test/data:/app/data --restart unless-stopped --name bdds-test lando/bdds-test
