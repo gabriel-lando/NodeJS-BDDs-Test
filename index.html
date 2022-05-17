@@ -20,7 +20,12 @@
 
           axios
             .post(window.location.href + "question/", data)
-            .then((resposta) => console.log(resposta.data))
+            .then((resposta) => {
+               console.log(resposta.data);
+               document.getElementById("question-post").value = "";
+               document.getElementById("correct-post").value = "";
+               document.getElementById("wrong-post").value = "";
+              })
             .catch((erro) => console.error(erro));
         } catch (err) {
           console.error(`Error: ${err}`);
