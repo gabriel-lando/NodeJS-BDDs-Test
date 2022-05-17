@@ -105,4 +105,4 @@ dist
 
 # User defined
 package-lock.json
-data/
+data.json

@@ -78,7 +78,7 @@ app.get('/question/:question', async function (req, res) {
 });
 
 app.get('/', async function (req, res) {
-	res.sendFile('index.html', { root: __dirname });
+	res.sendFile('data/index.html', { root: __dirname });
 });
 
 
