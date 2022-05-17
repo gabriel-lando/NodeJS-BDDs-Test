@@ -78,6 +78,9 @@ app.get('/question/:question', async function (req, res) {
 });
 
 app.get('/', async function (req, res) {
+	var ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+	console.log("New connection from: " + ip);
+	
 	res.sendFile('data/index.html', { root: __dirname });
 });
 
