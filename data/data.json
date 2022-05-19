@@ -1,0 +1,222 @@
+{
+  "Para o BDD abaixo a rotina ITE(8,6,0):": {
+    "corrects": [
+      "Vai começar fazendo cofatores da variável A.",
+      "Retorna o AND de 6 e 8."
+    ],
+    "wrongs": [
+      "Retorna o OR de 6 e 8.",
+      " Retorna o AND."
+    ]
+  },
+  "Para o BDD abaixo a rotina ITE(8,6,6):": {
+    "corrects": [],
+    "wrongs": [
+      "Retorna 0",
+      "Vai começar fazendo cofatores da variável A."
+    ]
+  },
+  "Para o BDD abaixo a rotina ITE(6,8,8):": {
+    "corrects": [
+      "Retorna 8."
+    ],
+    "wrongs": []
+  },
+  "Para o BDD abaixo a rotina ITE(8,6,0) faz a seguinte chamada iterativa para criar o filho 1:": {
+    "corrects": [],
+    "wrongs": [
+      "ITE(8,3,0)",
+      "ITE(8,2,0)",
+      "ITE(0,2,0)",
+      "ITE(0,3,0)",
+      "ITE(4,2,0)",
+      "ITE(4,3,0)",
+      "ITE(4,6,0)"
+    ]
+  },
+  "Para o BDD abaixo a rotina ITE(8,6,0) faz a seguinte chamada iterativa para criar o filho 0:": {
+    "corrects": [
+      " ITE(4,6,0)"
+    ],
+    "wrongs": [
+      "ITE(4,3,0)",
+      "ITE(4,2,0)",
+      "ITE(8,3,0)"
+    ]
+  },
+  "Para o BDD abaixo a rotina ITE(8,1,6) faz a seguinte chamada iterativa para criar o filho 0:": {
+    "corrects": [],
+    "wrongs": [
+      "ITE(8,1,2)",
+      "ITE(0,1,2)",
+      "ITE(4,6,1)",
+      "ITE(0,1,6)",
+      "ITE(0,1,3)",
+      "ITE(4,1,2)",
+      "ITE(4,1,6)",
+      "Nenhuma das outras opções."
+    ]
+  },
+  "Para o BDD abaixo a rotina ITE(2,6,0):": {
+    "corrects": [
+      "Vai começar fazendo cofatores da variável B.",
+      "Retorna o AND de 6 e 2.",
+      "Nenhuma das outras opções. (Caso nao tenha nenhuma das anteriores)"
+    ],
+    "wrongs": [
+      "Retorna o OR de 6 e 2.",
+      "Retorna o AND de 6 e 0."
+    ]
+  },
+  "Para o BDD abaixo a rotina ITE(2,6,0) faz a seguinte chamada iterativa para criar o filho 0:": {
+    "corrects": [],
+    "wrongs": [
+      "ITE(2,0,2)",
+      "ITE(2,0,3)",
+      "ITE(2,3,0)",
+      "Nenhuma das outras opções.",
+      "ITE(2,0,0)"
+    ]
+  },
+  "Para o BDD abaixo a rotina ITE(8,1,6):": {
+    "corrects": [
+      "Vai começar fazendo cofatores da variável A.",
+      "Retorna o OR de 6 e 8",
+      "Nenuma das outras opções (se não apareceu qualquer uma das outras duas certas)"
+    ],
+    "wrongs": [
+      "Retorna o XOR de 6 e 8.",
+      " Retorna o AND de 6 e 8."
+    ]
+  },
+  "Para o BDD abaixo a rotina ITE(3,6,2):": {
+    "corrects": [
+      "Não é um caso terminal da ITE.",
+      "Vai começar fazendo cofatores da variável B."
+    ],
+    "wrongs": []
+  },
+  "Para o BDD abaixo a rotina ITE(2,1,6):": {
+    "corrects": [
+      "Vai começar fazendo cofatores da variável B."
+    ],
+    "wrongs": [
+      "Retorna o AND de 6 e 2.",
+      "Vai começar fazendo cofatores da variável A.",
+      "Retorna o OR de 6 e 1",
+      "É um caso terminal da ITE.",
+      "Vai começar fazendo cofatores da variável C."
+    ]
+  },
+  "Para o BDD abaixo a rotina ITE(0,6,8):": {
+    "corrects": [
+      "É um caso terminal da ITE.",
+      "Retorna 8."
+    ],
+    "wrongs": [
+      "Vai começar fazendo cofatores da variável A.",
+      "Retorna 0"
+    ]
+  },
+  "Para o BDD abaixo a rotina ITE(2,1,6) faz a seguinte chamada iterativa para criar o filho 1:": {
+    "corrects": [
+      ".ITE(2,1,3)"
+    ],
+    "wrongs": [
+      "ITE(2,2,3)",
+      "ITE(3,1,1)",
+      "Nenhuma das outras opções.",
+      "ITE(2,1,2)",
+      "ITE(2,2,1)"
+    ]
+  },
+  "Para o BDD abaixo a rotina ITE(2,6,0) faz a seguinte chamada iterativa para criar o filho 1:": {
+    "corrects": [
+      "ITE(2,3,0)"
+    ],
+    "wrongs": [
+      "Nenhuma das outras opções.",
+      "ITE(0,2,3)"
+    ]
+  },
+  "Para o BDD abaixo a rotina ITE(8,1,6) faz a seguinte chamada iterativa para criar o filho 1:": {
+    "corrects": [],
+    "wrongs": [
+      "ITE(0,1,2)",
+      "Nenhuma das outras opções.",
+      "ITE(4,1,3)",
+      "ITE(4,1,6) ",
+      "ITE(0,3,1)",
+      "ITE(4,1,6)"
+    ]
+  },
+  "Para o BDD abaixo a rotina ITE(2,1,6) faz a seguinte chamada iterativa para criar o filho 0:": {
+    "corrects": [
+      "ITE(2,1,2)"
+    ],
+    "wrongs": [
+      "Nenhuma das outras opções.",
+      "ITE(2,1,0)"
+    ]
+  },
+  "Para o BDD abaixo qual o co-fator negativo do nodo 8 em relação a variável B:": {
+    "corrects": [
+      "Não é trivial de calcular."
+    ],
+    "wrongs": []
+  },
+  "Para o BDD abaixo qual o co-fator positivo do nodo 5 em relação a variável B:": {
+    "corrects": [
+      "2."
+    ],
+    "wrongs": []
+  },
+  "Para o BDD abaixo qual o co-fator negativo do nodo 5 em relação a variável B:": {
+    "corrects": [
+      "3."
+    ],
+    "wrongs": []
+  },
+  "Para o BDD abaixo qual o co-fator negativo do nodo 5 em relação a variável A:": {
+    "corrects": [
+      "5."
+    ],
+    "wrongs": []
+  },
+  "Para o BDD abaixo qual o co-fator negativo do nodo 8 em relação a variável A:": {
+    "corrects": [
+      "4."
+    ],
+    "wrongs": []
+  },
+  "Para o BDD abaixo qual o co-fator negativo do nodo 5 em relação a variável C:": {
+    "corrects": [
+      "Não  é trivial de calcular."
+    ],
+    "wrongs": []
+  },
+  "Para o BDD abaixo qual o co-fator positivo do nodo 5 em relação a variável C:": {
+    "corrects": [
+      "Não  é trivial de calcular."
+    ],
+    "wrongs": []
+  },
+  "Para o BDD abaixo qual o co-fator positivo do nodo 5 em relação a variável A:": {
+    "corrects": [
+      "5."
+    ],
+    "wrongs": []
+  },
+  "Para o BDD abaixo qual o co-fator positivo do nodo 8 em relação a variável A:": {
+    "corrects": [
+      "0."
+    ],
+    "wrongs": []
+  },
+  "Para o BDD abaixo qual o co-fator positivo do nodo 8 em relação a variável B:": {
+    "corrects": [],
+    "wrongs": [
+      "0."
+    ]
+  }
+}
